@@ -20,12 +20,17 @@ private:
 
     // proprietary functions
     int ComputeLevenshteinDistance(std::string s1, std::string s2);
+    void DeallocateImage();
 
 public:
     // constructors / destructors
     ChatBot();                     // constructor WITHOUT memory allocation
     ChatBot(std::string filename); // constructor WITH memory allocation
     ~ChatBot();
+    ChatBot(const ChatBot& source);
+    ChatBot& operator=(const ChatBot& source);
+    ChatBot(ChatBot&& source);
+    ChatBot& operator=(ChatBot&& source);
 
     //// STUDENT CODE
     ////
