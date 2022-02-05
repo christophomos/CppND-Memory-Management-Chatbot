@@ -100,7 +100,6 @@ ChatBot::ChatBot(ChatBot&& source)
     source._chatLogic = nullptr;
     source._rootNode = nullptr;
 
-    _image = new wxBitmap();
     _image = source._image;
     source._image = NULL;
 
@@ -125,7 +124,6 @@ ChatBot& ChatBot::operator=(ChatBot&& source)
     source._chatLogic = nullptr;
     source._rootNode = nullptr;
 
-    _image = new wxBitmap();
     _image = source._image;
     source._image = NULL;
 
